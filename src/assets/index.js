@@ -1,0 +1,1 @@
+export const LOGO = require('./logo-havelar-putih.png')
