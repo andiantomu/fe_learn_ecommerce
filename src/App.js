@@ -1,6 +1,7 @@
 import React from 'react';
 import { Routes, Route } from "react-router-dom";
 // note: Switch udah diganti sama Routes di update react-router-dom
+import { connect } from "react-redux";
 
 // import component
 import NavigationBar from './components/navigationBar';
@@ -10,7 +11,14 @@ import HomePage from "./pages/home";
 import LoginPage from "./pages/login";
 import RegisPage from "./pages/register";
 
+// import action
+import { keepLogin } from "./redux/actions";
+
 class App extends React.Component {
+  componentDidMount() {
+    let id = localStorage.getItem('iduser')
+    this.props.keepLogin(id)
+  }
   render() {
     return (
       <div>
@@ -25,4 +33,4 @@ class App extends React.Component {
   }
 }
 
-export default App;
+export default connect(null, {keepLogin})(App);

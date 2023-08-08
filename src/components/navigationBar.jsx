@@ -9,6 +9,8 @@ import {
  } from "react-bootstrap";
  import { LOGO } from "../assets";
  import { Link } from "react-router-dom";
+ import { connect } from "react-redux";
+ import { logout } from "../redux/actions";
  import './styles.css'
 
 class NavigationBar extends React.Component {
@@ -16,7 +18,7 @@ class NavigationBar extends React.Component {
         return (
             <Navbar className='my-navbar' fixed='top'>
                 <Container>
-                    <Navbar.Brand href="#home">
+                    <Navbar.Brand  as={Link} to='/'>
                         <Image src={LOGO} className='my-logo' />
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -26,15 +28,27 @@ class NavigationBar extends React.Component {
                             <Nav.Link style={styles.myNavLink}>Produk</Nav.Link>
                             <Nav.Link style={styles.myNavLink}>Contact Us</Nav.Link>
                         </Nav>
-                        <Button variant="outline-light" className='my-nav-link'>Keranjang</Button>
+                        <Button variant="outline-light">Keranjang</Button>
                         <Dropdown>
                             <Dropdown.Toggle variant="light" id="dropdown-basic">
-                                Username
+                                {this.props.username ? this.props.username : 'username'}
                             </Dropdown.Toggle>
 
                             <Dropdown.Menu data-bs-theme="dark">
-                                <Dropdown.Item as={Link} to='/login'>Login</Dropdown.Item>
-                                <Dropdown.Item as={Link} to='/register'>Register</Dropdown.Item>
+                                {
+                                    // kalo login (dapat data username di state), maka
+                                    this.props.username ?
+                                    <>
+                                        <Dropdown.Item>Profile</Dropdown.Item>
+                                        <Dropdown.Item>History</Dropdown.Item>
+                                        <Dropdown.Item onClick={this.props.logout}>Log Out</Dropdown.Item>
+                                    </> :
+                                    // kalo enggak, maka
+                                    <>
+                                        <Dropdown.Item as={Link} to='/login'>Login</Dropdown.Item>
+                                        <Dropdown.Item as={Link} to='/register'>Register</Dropdown.Item>
+                                    </>
+                                }
                             </Dropdown.Menu>
                         </Dropdown>
                     </Navbar.Collapse>
@@ -50,4 +64,10 @@ const styles = {
     }
 }
 
-export default NavigationBar
+const mapStateToProps = (state) => {
+    return {
+        username: state.userReducer.username
+    }
+}
+
+export default connect(mapStateToProps, {logout})(NavigationBar)

@@ -18,7 +18,7 @@ class RegisPage extends React.Component {
                             <Form.Control type="text" rows={3} placeholder="New Username" />
                         </Form.Group>
                         <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-                            <Form.Control type="email" placeholder="email" />
+                            <Form.Control type="email" placeholder="Email" />
                         </Form.Group>
                         <Form.Group className="mb-3" controlId="formPlaintextPassword">
                             <Form.Control type="password" placeholder="New Password" />
