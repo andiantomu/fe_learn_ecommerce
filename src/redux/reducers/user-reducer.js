@@ -3,7 +3,9 @@ const INITIAL_STATE = {
     username: "",
     password: "",
     role: "",
-    errorLogin: false
+    errorLogin: false,
+    regInvalid: false,
+    regSuccess: false
 }
 
 const userReducer = (state = INITIAL_STATE, action) => {
@@ -28,6 +30,21 @@ const userReducer = (state = INITIAL_STATE, action) => {
             }
         case 'LOG_OUT':
             return INITIAL_STATE
+        case 'REG_INVALID':
+            return {
+                ...state,
+                regInvalid: true
+            }
+        case 'REG_INVALID_ERROR':
+            return {
+                ...state,
+                regInvalid: false
+            }
+        case 'REG_SUCCESS':
+            return {
+                ...state,
+                regSuccess: true
+            }
         default:
             return state
     }

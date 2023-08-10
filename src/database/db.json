@@ -1,19 +1,25 @@
 {
-    "users": [
-        {
-            "id": 1,
-            "username": "admin",
-            "password": "admin",
-            "email": "admin@email.com",
-            "role": "admin"
-        },
-        {
-            "id": 2,
-            "username": "Budi",
-            "password": "user123",
-            "email": "user@email.com",
-            "role": "user"
-        }
-    ]
-
+  "users": [
+    {
+      "id": 1,
+      "username": "admin",
+      "password": "admin",
+      "email": "admin@email.com",
+      "role": "admin"
+    },
+    {
+      "id": 2,
+      "username": "budigunawan",
+      "password": "user123",
+      "email": "budigunawan@email.com",
+      "role": "user"
+    },
+    {
+      "username": "muhammad",
+      "email": "andi.albayan@gmail.com",
+      "password": "jdhfjh988uJ",
+      "role": "user",
+      "id": 3
+    }
+  ]
 }

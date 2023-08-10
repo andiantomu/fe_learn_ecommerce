@@ -53,3 +53,40 @@ export const keepLogin = (id) => {
         })
     }
 }
+
+export const regDataValid = (username, email, data) => {
+    return (dispatch) => {
+        Axios.get(`http://localhost:2000/users?username=${username}`)
+        .then(res => {
+            if (res.data.length !== 0) {
+                return dispatch({
+                    type: 'REG_INVALID'
+                })
+            } else {
+                Axios.get(`http://localhost:2000/users?email=${email}`)
+                .then(res => {
+                    if (res.data.length !== 0) {
+                        return dispatch({
+                            type: 'REG_INVALID'
+                        })
+                    } else {
+                        Axios.post('http://localhost:2000/users/', data)
+                        .then(res => {
+                            return dispatch({
+                                type: 'REG_SUCCESS',
+                            })
+                        })
+                    }
+                })
+            }
+        })
+    }
+}
+
+export const regInvaErr = () => {
+    return (dispatch) => {
+        return dispatch({
+            type: 'REG_INVALID_ERROR'
+        })
+    }
+}
