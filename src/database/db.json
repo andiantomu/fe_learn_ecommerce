@@ -1,4 +1,260 @@
 {
+  "products": [
+    {
+      "id": 1,
+      "name": "NIKE AIR ZOOM-TYPE",
+      "category": "Men, Sport, Sneaker",
+      "brand": "NIKE",
+      "rating": [],
+      "colour": "BLACK/SUMMIT WHITE-MENTA-ORANGE TRANCE",
+      "description": "When it comes to basketball, there is no way around Nike – the brand with the Swoosh belongs to the game like dunks, three-pointers and cross-overs. Whether in the NBA, European leagues or your neighborhood...",
+      "price": 2500000,
+      "stock": 13,
+      "images": [
+        "https://images.pexels.com/photos/345415/pexels-photo-345415.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1https://images.pexels.com/photos/10497369/pexels-photo-10497369.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "https://images.pexels.com/photos/12628400/pexels-photo-12628400.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "https://images.pexels.com/photos/15435913/pexels-photo-15435913/free-photo-of-person-wearing-white-sneakers.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "https://images.pexels.com/photos/5730519/pexels-photo-5730519.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "https://images.pexels.com/photos/10726876/pexels-photo-10726876.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "https://images.pexels.com/photos/5730516/pexels-photo-5730516.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "JORDAN WESTBROOK ONE TAKE",
+      "category": "Men, Sport, Sneaker",
+      "brand": "JORDAN",
+      "rating": [],
+      "colour": "WHITE/WHITE-BLACK-RAGE GREEN",
+      "description": "In the game of basketball Michael Jordan is a god. Number 23 of the Chicago Bulls has set the bar extremely high: His six championship rings, five mvp`s, numerous scoring titles, not to mention his ...",
+      "price": 1500000,
+      "stock": 10,
+      "images": [
+        "https://images.pexels.com/photos/2529157/pexels-photo-2529157.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "https://images.pexels.com/photos/6540980/pexels-photo-6540980.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "https://images.pexels.com/photos/12725050/pexels-photo-12725050.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "https://images.pexels.com/photos/13411905/pexels-photo-13411905.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "https://images.pexels.com/photos/13408850/pexels-photo-13408850.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "https://images.pexels.com/photos/9623083/pexels-photo-9623083.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "NIKE KYRIE 6",
+      "category": "Men, Sport, Sneaker",
+      "brand": "NIKE",
+      "rating": [],
+      "colour": "WHITE/BLUE FURY-OPTI YELLOW-DIGITAL PINK",
+      "description": "The NIKE KYRIE 6 is the latest addition to the signature performance line of Kyrie Irving and Nike. If you think about Uncle Drew, immediately the explosive dribblings and his speed of direction changees of the impersonated ankle breaker comes into mind.",
+      "price": 1780000,
+      "stock": 9,
+      "images": [
+        "https://images.pexels.com/photos/2529157/pexels-photo-2529157.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "https://images.pexels.com/photos/6540980/pexels-photo-6540980.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "https://images.pexels.com/photos/12725050/pexels-photo-12725050.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "https://images.pexels.com/photos/13411905/pexels-photo-13411905.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "https://images.pexels.com/photos/13408850/pexels-photo-13408850.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "https://images.pexels.com/photos/9623083/pexels-photo-9623083.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "JORDAN AIR JORDAN 14 RETRO",
+      "category": "Men, Sport, Sneaker",
+      "brand": "JORDAN",
+      "rating": [],
+      "colour": "BLACK/GYM RED-WHITE-OFF WHITE",
+      "description": "In the game of basketball Michael Jordan is a god. Number 23 of the Chicago Bulls has set the bar extremely high: His six championship rings, five mvp`s, numerous scoring titles, not to mention his ...",
+      "price": 2680000,
+      "stock": 10,
+      "images": [
+        "https://images.pexels.com/photos/2385477/pexels-photo-2385477.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "https://images.pexels.com/photos/11209837/pexels-photo-11209837.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "https://images.pexels.com/photos/13288276/pexels-photo-13288276.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "https://images.pexels.com/photos/11209826/pexels-photo-11209826.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "https://images.pexels.com/photos/12725054/pexels-photo-12725054.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "https://images.pexels.com/photos/13131619/pexels-photo-13131619.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+      ]
+    },
+    {
+      "id": 5,
+      "name": "NIKE W NIKE REACT ELEMENT 55",
+      "category": "Women, Sport, Sneaker",
+      "brand": "NIKE",
+      "rating": [],
+      "colour": "WHITE/FIRE PINK-SAPPHIRE-BARELY VOLT",
+      "description": "When it comes to basketball, there is no way around Nike – the brand with the Swoosh belongs to the game like dunks, three-pointers and cross-overs. Whether in the NBA, European leagues or your neighborhood ...",
+      "price": 2345000,
+      "stock": 12,
+      "images": [
+        "https://kickz.akamaized.net/en/media/images/p/1200/W_NIKE_REACT_ELEMENT_55-WHITE_FIRE_PINK_SAPPHIRE_BARELY_VOLT-1.jpg",
+        "https://kickz.akamaized.net/en/media/images/p/1200/W_NIKE_REACT_ELEMENT_55-WHITE_FIRE_PINK_SAPPHIRE_BARELY_VOLT-2.jpg",
+        "https://kickz.akamaized.net/en/media/images/p/1200/W_NIKE_REACT_ELEMENT_55-WHITE_FIRE_PINK_SAPPHIRE_BARELY_VOLT-3.jpg",
+        "https://kickz.akamaized.net/en/media/images/p/1200/W_NIKE_REACT_ELEMENT_55-WHITE_FIRE_PINK_SAPPHIRE_BARELY_VOLT-4.jpg",
+        "https://kickz.akamaized.net/en/media/images/p/1200/W_NIKE_REACT_ELEMENT_55-WHITE_FIRE_PINK_SAPPHIRE_BARELY_VOLT-5.jpg",
+        "https://kickz.akamaized.net/en/media/images/p/1200/W_NIKE_REACT_ELEMENT_55-WHITE_FIRE_PINK_SAPPHIRE_BARELY_VOLT-6.jpg"
+      ]
+    },
+    {
+      "id": 6,
+      "name": "NIKE W AIR MAX 90",
+      "category": "Women, Sport, Sneaker",
+      "brand": "NIKE",
+      "rating": [],
+      "colour": "WHITE/PARTICLE GREY-ROSE-BLACK",
+      "description": "When it comes to basketball, there is no way around Nike – the brand with the Swoosh belongs to the game like dunks, three-pointers and cross-overs. Whether in the NBA, European leagues or your neighborhood ...",
+      "price": 1987300,
+      "stock": 10,
+      "images": [
+        "https://kickz.akamaized.net/en/media/images/p/1200/nike-W_AIR_MAX_90-WHITE_PARTICLE_GREY_ROSE_BLACK-1.jpg",
+        "https://kickz.akamaized.net/en/media/images/p/1200/nike-W_AIR_MAX_90-WHITE_PARTICLE_GREY_ROSE_BLACK-2.jpg",
+        "https://kickz.akamaized.net/en/media/images/p/1200/nike-W_AIR_MAX_90-WHITE_PARTICLE_GREY_ROSE_BLACK-3.jpg",
+        "https://kickz.akamaized.net/en/media/images/p/1200/nike-W_AIR_MAX_90-WHITE_PARTICLE_GREY_ROSE_BLACK-4.jpg",
+        "https://kickz.akamaized.net/en/media/images/p/1200/nike-W_AIR_MAX_90-WHITE_PARTICLE_GREY_ROSE_BLACK-5.jpg",
+        "https://kickz.akamaized.net/en/media/images/p/1200/nike-W_AIR_MAX_90-WHITE_PARTICLE_GREY_ROSE_BLACK-6.jpg"
+      ]
+    },
+    {
+      "id": 7,
+      "name": "VANS UA ERA (MIX & MATCH)",
+      "category": "Women, Converse",
+      "brand": "VANS",
+      "rating": [],
+      "colour": "cadmium yellow/tidepool",
+      "description": "In 1966 Jim van Doren, Gordy Lee and Serge D''Elia founded the Van Doren Rubber Company. In a shop next to the factory they sold the Hi-Top (also Sk8-Hi). It was the first sneaker which ...",
+      "price": 678956,
+      "stock": 8,
+      "images": [
+        "https://images.pexels.com/photos/5061071/pexels-photo-5061071.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "https://images.pexels.com/photos/6389720/pexels-photo-6389720.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "https://images.pexels.com/photos/631986/pexels-photo-631986.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "https://images.pexels.com/photos/1576944/pexels-photo-1576944.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "https://images.pexels.com/photos/8184267/pexels-photo-8184267.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "https://images.pexels.com/photos/4496933/pexels-photo-4496933.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+      ]
+    },
+    {
+      "id": 8,
+      "name": "VANS UA CLASSIC SLIP-ON (BREAST CANCER)",
+      "category": "Women, Converse",
+      "brand": "VANS",
+      "rating": [],
+      "colour": "cadmium yellow/tidepool",
+      "description": "In 1966 Jim van Doren, Gordy Lee and Serge D''Elia founded the Van Doren Rubber Company. In a shop next to the factory they sold the Hi-Top (also Sk8-Hi). It was the first sneaker which ...",
+      "price": 543786,
+      "stock": 12,
+      "images": [
+        "https://images.pexels.com/photos/631988/pexels-photo-631988.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "https://images.pexels.com/photos/7940543/pexels-photo-7940543.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "https://images.pexels.com/photos/13312678/pexels-photo-13312678.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "https://images.pexels.com/photos/3680210/pexels-photo-3680210.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "https://images.pexels.com/photos/1018482/pexels-photo-1018482.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "https://images.pexels.com/photos/3568788/pexels-photo-3568788.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+      ]
+    },
+    {
+      "id": 9,
+      "name": "NIKE WMNS NIKE AIR MAX 90 SLIDE",
+      "category": "Women, Sandals, Flip Flop ",
+      "brand": "NIKE",
+      "rating": [],
+      "colour": "WHITE/SMOKE GREY-ROSE-LT SMOKE GREY",
+      "description": "When it comes to basketball, there is no way around Nike – the brand with the Swoosh belongs to the game like dunks, three-pointers and cross-overs. Whether in the NBA, European leagues or your neighborhood ...",
+      "price": 879650,
+      "stock": 15,
+      "images": [
+        "https://kickz.akamaized.net/en/media/images/p/1200/WMNS_NIKE_AIR_MAX_90_SLIDE-WHITE_SMOKE_GREY_ROSE_LT_SMOKE_GREY-1.jpg",
+        "https://kickz.akamaized.net/en/media/images/p/1200/WMNS_NIKE_AIR_MAX_90_SLIDE-WHITE_SMOKE_GREY_ROSE_LT_SMOKE_GREY-2.jpg",
+        "https://kickz.akamaized.net/en/media/images/p/1200/WMNS_NIKE_AIR_MAX_90_SLIDE-WHITE_SMOKE_GREY_ROSE_LT_SMOKE_GREY-3.jpg",
+        "https://kickz.akamaized.net/en/media/images/p/1200/WMNS_NIKE_AIR_MAX_90_SLIDE-WHITE_SMOKE_GREY_ROSE_LT_SMOKE_GREY-4.jpg",
+        "https://kickz.akamaized.net/en/media/images/p/1200/WMNS_NIKE_AIR_MAX_90_SLIDE-WHITE_SMOKE_GREY_ROSE_LT_SMOKE_GREY-5.jpg",
+        "https://kickz.akamaized.net/en/media/images/p/1200/WMNS_NIKE_AIR_MAX_90_SLIDE-WHITE_SMOKE_GREY_ROSE_LT_SMOKE_GREY-6.jpg"
+      ]
+    },
+    {
+      "id": 10,
+      "name": "PLEASURES UTOPIA CROCS BY PLEASURES",
+      "category": "Man, Sandals, Flip Flop ",
+      "brand": "PLEASURES",
+      "colour": "BLACK",
+      "rating": [],
+      "description": "When it comes to basketball, there is no way around Nike – the brand with the Swoosh belongs to the game like dunks, three-pointers and cross-overs. Whether in the NBA, European leagues or your neighborhood ...",
+      "price": 543000,
+      "stock": 13,
+      "images": [
+        "https://kickz.akamaized.net/en/media/images/p/1200/Utopia_Crocs_by_PLEASURES-Black-3.jpg",
+        "https://kickz.akamaized.net/en/media/images/p/1200/Utopia_Crocs_by_PLEASURES-Black-1.jpg",
+        "https://kickz.akamaized.net/en/media/images/p/1200/Utopia_Crocs_by_PLEASURES-Black-2.jpg",
+        "https://kickz.akamaized.net/en/media/images/p/1200/Utopia_Crocs_by_PLEASURES-Black-4.jpg",
+        "https://kickz.akamaized.net/en/media/images/p/1200/Utopia_Crocs_by_PLEASURES-Black-5.jpg",
+        "https://kickz.akamaized.net/en/media/images/p/1200/Utopia_Crocs_by_PLEASURES-Black-6.jpg"
+      ]
+    },
+    {
+      "id": 11,
+      "name": "PUMA CLYDE HARDWOOD RETRO",
+      "category": "Man, Sport, Basketball",
+      "brand": "PUMA",
+      "rating": [],
+      "colour": "Puma White-Orange Pop",
+      "description": "Der PUMA CLYDE HARDWOOD ehrt Walt \"Clyde\" Frazier, der mit dem originalen Puma Clyde in den 70ern zur Stilikone wurde. Auch der Clyde Hardwood verbindet wieder Performance mit Lifestyle und überzeugt damit auf ganzer Linie.",
+      "price": 2314870,
+      "stock": 9,
+      "images": [
+        "https://kickz.akamaized.net/en/media/images/p/1200/puma-Clyde_Hardwood_Retro-Puma_White_Orange_Pop-1.jpg",
+        "https://kickz.akamaized.net/en/media/images/p/1200/puma-Clyde_Hardwood_Retro-Puma_White_Orange_Pop-2.jpg",
+        "https://kickz.akamaized.net/en/media/images/p/1200/puma-Clyde_Hardwood_Retro-Puma_White_Orange_Pop-3.jpg",
+        "https://kickz.akamaized.net/en/media/images/p/1200/puma-Clyde_Hardwood_Retro-Puma_White_Orange_Pop-4.jpg",
+        "https://kickz.akamaized.net/en/media/images/p/1200/puma-Clyde_Hardwood_Retro-Puma_White_Orange_Pop-5.jpg",
+        "https://kickz.akamaized.net/en/media/images/p/1200/puma-Clyde_Hardwood_Retro-Puma_White_Orange_Pop-6.jpg"
+      ]
+    },
+    {
+      "id": 12,
+      "name": "ADIDAS PERFORMANCE MARQUEE MID - VEGAS",
+      "category": "Man, Sport, Basketball",
+      "brand": "ADIDAS",
+      "rating": [],
+      "colour": "legend ink/ftwr white/flash orange",
+      "description": "When it comes to basketball, there is no way around Nike – the brand with the Swoosh belongs to the game like dunks, three-pointers and cross-overs. Whether in the NBA, European leagues or your neighborhood ...",
+      "price": 1345650,
+      "stock": 10,
+      "images": [
+        "https://kickz.akamaized.net/en/media/images/p/1200/adidas_performance-MARQUEE_MID_VEGAS-legend_ink_ftwr_white_flash_orange-3.jpg",
+        "https://kickz.akamaized.net/en/media/images/p/1200/adidas_performance-MARQUEE_MID_VEGAS-legend_ink_ftwr_white_flash_orange-1.jpg",
+        "https://kickz.akamaized.net/en/media/images/p/1200/adidas_performance-MARQUEE_MID_VEGAS-legend_ink_ftwr_white_flash_orange-2.jpg",
+        "https://kickz.akamaized.net/en/media/images/p/1200/adidas_performance-MARQUEE_MID_VEGAS-legend_ink_ftwr_white_flash_orange-4.jpg",
+        "https://kickz.akamaized.net/en/media/images/p/1200/adidas_performance-MARQUEE_MID_VEGAS-legend_ink_ftwr_white_flash_orange-5.jpg",
+        "https://kickz.akamaized.net/en/media/images/p/1200/adidas_performance-MARQUEE_MID_VEGAS-legend_ink_ftwr_white_flash_orange-6.jpg"
+      ]
+    }
+  ],
+  "slider": [
+    {
+      "image": "https://images.unsplash.com/photo-1544441893-675973e31985?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80",
+      "title": "Fit your style"
+    },
+    {
+      "image": "https://images.unsplash.com/photo-1505784045224-1247b2b29cf3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
+      "title": "Strength your passion and feel"
+    },
+    {
+      "image": "https://images.unsplash.com/photo-1515355758951-b4b20ba84c1e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+      "title": "Fall in love at first glance"
+    },
+    {
+      "image": "https://images.unsplash.com/photo-1543322748-33df6d3db806?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1351&q=80",
+      "title": "Express your style with us"
+    },
+    {
+      "image": "https://images.unsplash.com/photo-1575891942688-395c4fd38fb8?ixlib=rb-1.2.1&auto=format&fit=crop&w=1367&q=80",
+      "title": "Made your day with smile"
+    },
+    {
+      "image": "https://images.unsplash.com/photo-1579199265916-436a773ce30b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+      "title": "Find what your love"
+    }
+  ],
   "users": [
     {
       "id": 1,

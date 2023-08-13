@@ -20,3 +20,30 @@
     background-color: #6f737986;
     margin-top: 40px;
 }
+.my-carousel-img {
+    width: 100vw;
+}
+.my-carousel-text {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.my-product-cont {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.my-card-img {
+    height: 12rem;
+    object-fit: cover;
+}
+.my-card-title {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.my-card-btn-cont {
+    display: flex;
+    justify-content: space-evenly;
+}
+.my-card-btn {
+    width: 45%;
+}

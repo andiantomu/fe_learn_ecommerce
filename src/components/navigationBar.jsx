@@ -25,7 +25,7 @@ class NavigationBar extends React.Component {
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="me-auto">
                             <Nav.Link style={styles.myNavLink} as={Link} to='/'>Home</Nav.Link>
-                            <Nav.Link style={styles.myNavLink}>Produk</Nav.Link>
+                            <Nav.Link style={styles.myNavLink}>Product</Nav.Link>
                             <Nav.Link style={styles.myNavLink}>Contact Us</Nav.Link>
                         </Nav>
                         <Button variant="outline-light">Keranjang</Button>
