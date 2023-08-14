@@ -14,17 +14,10 @@ class LoginPage extends React.Component {
     constructor (props) {
         super(props)
         this.state = {
-            // local state buat bikin tampilan password
-            // visibility: false
             // ini state buat modal kalo input kosong
             error: false,
         }
     }
-    // onVisIcon = () => {
-    //     this.setState({visibility: !(this.state.visibility)})
-    // }
-    // sorry gak jadi kepake, soalnya si bootstrap udah nyediain pake type='password'
-
     onLogin = () => {
         // Apa aja yg dilakuin?
         // Ambil data input usernama & password
@@ -34,17 +27,16 @@ class LoginPage extends React.Component {
         if (!username || !password) {
             return this.setState({error: true})
         }
-        // Cek database ada apa ga data username, pake axios (udah dipindahin pake thunk)
+        // Cek database ada apa ga data username, lihat user-action
         this.props.login(username, password)
     }
 
     render() {
-        // Kalo login berhasiil, redirect ke home
+        // Kalo login berhasil (username di globalstate terisi), maka redirect ke home
         if (this.props.username) {
             return <Navigate to='/' />
+            // note: Navigate adalah syntax baru dari Redirect dari react-router-dom
         }
-        // ini namanya object deconstrutary
-        // const { visibility } = this.state
 
         return (
             <div className="my-login-div">
@@ -58,14 +50,9 @@ class LoginPage extends React.Component {
                             ref="username"
                         />
                     </InputGroup>
-                    {/* <InputGroup className="mb-3">
-                        <InputGroup.Text onClick={this.onVisIcon}>
-                            {visibility ? '@' : '--'}
-                        </InputGroup.Text>
-                        <Form.Control type={visibility ? 'text' : 'password'} placeholder="Password" />
-                    </InputGroup> */}
                     <InputGroup className="mb-3">
                         <Form.Control
+                            // pake bootstrap type="password", kalo di video pake function buat hidden password
                             type='password'
                             placeholder="Password"
                             // sama, ref ini buat ambil data
@@ -75,32 +62,28 @@ class LoginPage extends React.Component {
                     <Button variant="light" onClick={this.onLogin}>Login</Button>
                     <p>Already have an account? <Link to='/register'>Register</Link></p>
                 </div>
-                {/* Modal jika input kosong */}
+                {/* Modal (notif) jika input kosong */}
                 <Modal show={this.state.error}>
                     <Modal.Header>
                         <Modal.Title>Error</Modal.Title>
                     </Modal.Header>
-
                     <Modal.Body>
                         <p>Please input all data</p>
                     </Modal.Body>
-
                     <Modal.Footer>
                         <Button variant="primary" onClick={() => this.setState({error: false})}>
                             OK
                         </Button>
                     </Modal.Footer>
                 </Modal>
-                {/* Modal buat error username ga ada di database */}
+                {/* Modal (notif) buat error username ga ada di database */}
                 <Modal show={this.props.errorLogin}>
                     <Modal.Header>
                         <Modal.Title>Error</Modal.Title>
                     </Modal.Header>
-
                     <Modal.Body>
                         <p>This account doesn't exist</p>
                     </Modal.Body>
-
                     <Modal.Footer>
                         <Button variant="primary" onClick={this.props.errorLoginFalse}>
                             OK

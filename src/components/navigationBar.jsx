@@ -31,12 +31,13 @@ class NavigationBar extends React.Component {
                         <Button variant="outline-light">Keranjang</Button>
                         <Dropdown>
                             <Dropdown.Toggle variant="light" id="dropdown-basic">
+                                {/* kalo login (username di user-reducer terisi) */}
                                 {this.props.username ? this.props.username : 'username'}
                             </Dropdown.Toggle>
 
                             <Dropdown.Menu data-bs-theme="dark">
                                 {
-                                    // kalo login (dapat data username di state), maka
+                                    // kalo login (username di user-reducer terisi), maka
                                     this.props.username ?
                                     <>
                                         <Dropdown.Item>Profile</Dropdown.Item>

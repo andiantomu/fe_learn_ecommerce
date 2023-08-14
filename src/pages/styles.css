@@ -47,3 +47,26 @@
 .my-card-btn {
     width: 45%;
 }
+.my-detail-cont {
+    display: flex;
+    margin-top: 13vh;
+}
+.my-detail-caro-cont {
+    width: 40vw;
+    height: 50vw;
+}
+.my-detail-carousel-img {
+    width: 40vw;
+    height: 50vw;
+    object-fit: cover;
+}
+.my-detail-desc-cont {
+    padding: 1rem;
+    width: 60vw;
+}
+.my-detail-btn-cont {
+    display: flex;
+}
+.my-detail-btn-input {
+    width: 1rem;
+}

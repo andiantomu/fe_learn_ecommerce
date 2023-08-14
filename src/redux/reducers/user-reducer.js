@@ -3,9 +3,10 @@ const INITIAL_STATE = {
     username: "",
     password: "",
     role: "",
-    errorLogin: false,
-    regInvalid: false,
-    regSuccess: false
+    cart: [],
+    errorLogin: false, // ini dipanggil oleh login.jsx
+    regInvalid: false, // ini dipanggil oleh register.jsx
+    regSuccess: false // ini dipanggil oleh register.jsx
 }
 
 const userReducer = (state = INITIAL_STATE, action) => {
@@ -16,7 +17,8 @@ const userReducer = (state = INITIAL_STATE, action) => {
                 id: action.payload.id,
                 username: action.payload.username,
                 password: action.payload.password,
-                role: action.payload.role
+                role: action.payload.role,
+                cart: action.payload.cart
             }
         case 'ERROR_LOGIN':
             return {

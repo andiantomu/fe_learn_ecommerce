@@ -54,7 +54,8 @@ class RegisPage extends React.Component {
             username: username,
             email: email,
             password: password,
-            role: 'user'
+            role: 'user',
+            cart: []
         }
         // cek udah keisi apa belum
         if (!(username && email && password && passwordCf))
@@ -63,7 +64,7 @@ class RegisPage extends React.Component {
         // cek confirm password
         if (!(password === passwordCf))
         return this.setState({modalErr: [true, 'Silahkan konfirmasi password dengan benar.']})
-        // Berikutnya cek database, sudah ada user dan email apa ga (pake axios di action)
+        // Jika semua input sudah benar, maka melakukan action regDataValid (lihat user-action)
         this.props.regDataValid(username, email, data)
     }
     render() {
@@ -76,6 +77,7 @@ class RegisPage extends React.Component {
                     <h1>Hello,</h1>
                     <p>welcome!</p>
                     <Form>
+                        {/* Input username */}
                         <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
                             <Form.Control
                                 onChange={(e) => this.userValid(e)}
@@ -88,6 +90,7 @@ class RegisPage extends React.Component {
                                 {this.state.usernameErr[0] ? this.state.usernameErr[1] : ''}
                             </Form.Text>
                         </Form.Group>
+                        {/* Input email */}
                         <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
                             <Form.Control
                                 onChange={(e) => this.emailValid(e)}
@@ -99,6 +102,7 @@ class RegisPage extends React.Component {
                                 {this.state.emailErr[0] ? this.state.emailErr[1] : ''}
                             </Form.Text>
                         </Form.Group>
+                        {/* Input password */}
                         <Form.Group className="mb-3" controlId="formPlaintextPassword">
                             <Form.Control
                                 onChange={(e) => this.passwordValid(e)}
@@ -110,6 +114,7 @@ class RegisPage extends React.Component {
                                 {this.state.passwordErr[0] ? this.state.passwordErr[1] : ''}
                             </Form.Text>
                         </Form.Group>
+                        {/* Confirm password */}
                         <Form.Group className="mb-3" controlId="formPlaintextPassword">
                             <Form.Control type="password" placeholder="Confirm Password" ref="passwordCf" />
                         </Form.Group>
@@ -150,8 +155,8 @@ class RegisPage extends React.Component {
 
 const mapStateToProps = (state) => {
     return {
-        regInvalid: state.userReducer.regInvalid,
-        regSuccess: state.userReducer.regSuccess
+        regInvalid: state.userReducer.regInvalid, // dipanggil oleh line 137
+        regSuccess: state.userReducer.regSuccess // dipanggil oleh line 70
     }
 } 
 

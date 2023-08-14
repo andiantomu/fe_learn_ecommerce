@@ -56,20 +56,25 @@ export const keepLogin = (id) => {
 
 export const regDataValid = (username, email, data) => {
     return (dispatch) => {
+        // cek apakah sudah ada username tsb di datanbase
         Axios.get(`http://localhost:2000/users?username=${username}`)
         .then(res => {
+            // kalo sudah ada ada, maka
             if (res.data.length !== 0) {
                 return dispatch({
                     type: 'REG_INVALID'
                 })
             } else {
+                // kalo tidak ada, maka berikutnya cek apakah sudah ada email tsb di datanbase
                 Axios.get(`http://localhost:2000/users?email=${email}`)
                 .then(res => {
+                    // kalo sudah ada ada, maka reducer case di bawah ini:
                     if (res.data.length !== 0) {
                         return dispatch({
                             type: 'REG_INVALID'
                         })
                     } else {
+                        // kalo benar ga ada, maka reducer case di bawah ini:
                         Axios.post('http://localhost:2000/users/', data)
                         .then(res => {
                             return dispatch({

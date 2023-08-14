@@ -3,6 +3,7 @@ import Axios from "axios";
 import Carousel from 'react-bootstrap/Carousel';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
+import { Link } from "react-router-dom";
 
 class HomePage extends React.Component {
     constructor (props) {
@@ -55,7 +56,14 @@ class HomePage extends React.Component {
                         </Card.Body>
                         <Card.Body className='my-card-btn-cont'>
                             <Button className='my-card-btn' variant="primary">Wish</Button>
-                            <Button className='my-card-btn' variant="primary">Buy</Button>
+                            <Button
+                            className='my-card-btn'
+                            as={Link}
+                            to={`/detail/${item.id}`}
+                            // lihat set up route di App.js, pake dynamic url
+                            variant="primary">
+                                Buy
+                            </Button>
                         </Card.Body>
                     </Card>
                     ))}
@@ -64,14 +72,5 @@ class HomePage extends React.Component {
         )
     }
 }
-
-// const styles = {
-//     myCardTitle: {
-//         width: '100%',
-//         whiteSpace: 'nowrap',
-//         overflow: 'hidden',
-//         textOverflow: 'ellipsis'
-//     }
-// }
 
 export default HomePage

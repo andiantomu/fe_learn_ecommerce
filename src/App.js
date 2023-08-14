@@ -10,6 +10,7 @@ import NavigationBar from './components/navigationBar';
 import HomePage from "./pages/home";
 import LoginPage from "./pages/login";
 import RegisPage from "./pages/register";
+import DetailPage from './pages/detail';
 
 // import action
 import { keepLogin } from "./redux/actions";
@@ -27,6 +28,8 @@ class App extends React.Component {
           <Route path='/' Component={HomePage} exact />
           <Route path='/login' Component={LoginPage} />
           <Route path='/register' Component={RegisPage} />
+          <Route path='/detail/:id' Component={DetailPage} />
+          {/* `:id` ini dynamic url */}
         </Routes>
       </div>
     );
