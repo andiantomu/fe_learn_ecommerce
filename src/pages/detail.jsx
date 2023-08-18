@@ -1,6 +1,6 @@
 import React from "react";
 import Axios from "axios";
-import { useParams } from "react-router-dom";
+import { useParams, Navigate } from "react-router-dom";
 import { connect } from "react-redux";
 import { addToCart } from "../redux/actions";
 import Carousel from 'react-bootstrap/Carousel';
@@ -22,7 +22,8 @@ class DetailPage extends React.Component {
             product: {},
             images: [],
             price: 0,
-            qty: 1
+            qty: 1,
+            toLogin: false
         }
     }
     onInc = () => {
@@ -56,8 +57,7 @@ class DetailPage extends React.Component {
     onCart = () => {
         let userId = this.props.userId;
         if (!userId) {
-            return alert('login dulu')
-            // harusnya redirect ke page login, pake useNavigate
+            return this.setState({ toLogin: true })
         };
         let { id } = this.props.params;
         let data = {
@@ -88,6 +88,11 @@ class DetailPage extends React.Component {
             })
     }
     render() {
+        // Kalo login berhasil (username di globalstate terisi), maka redirect ke home
+        if (this.state.toLogin) {
+            return <Navigate to='/login' />
+            // note: Navigate adalah syntax baru dari Redirect dari react-router-dom
+        }
         return (
             <div className="my-detail-cont">
                 <Carousel className="my-detail-caro-cont">
