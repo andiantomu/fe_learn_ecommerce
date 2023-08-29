@@ -29,7 +29,7 @@ class DetailPage extends React.Component {
     onInc = () => {
         // tiap klik akan mengubah state qty
         if (this.state.qty < this.state.product.stock) {
-            return this.setState({ qty: (this.state.qty + 1) })
+            return this.setState({ qty: +(this.state.qty + 1) })
         // jika sudah maks stock, maka tidak bisa ditambah
         } else {
             return
@@ -38,7 +38,7 @@ class DetailPage extends React.Component {
     onDec = () => {
         // tiap klik akan mengubah state qty
         if (this.state.qty > 1) {
-            return this.setState({ qty: (this.state.qty - 1) })
+            return this.setState({ qty: +(this.state.qty - 1) })
         // jika sudah minimum (jumlah 1), maka tidak bisa dikurang
         } else {
             return
@@ -48,6 +48,8 @@ class DetailPage extends React.Component {
         // to makse sure the input is in range between 1 and max stock
         if (e.target.value > 0 && e.target.value <= this.state.product.stock) {
             this.setState({ qty: +e.target.value })
+        } else if (e.target.value === "") {
+            this.setState({ qty: "" })
         } else if (e.target.value < 1) {
             this.setState({ qty: 1 })
         } else {
@@ -61,15 +63,20 @@ class DetailPage extends React.Component {
         };
         let { id } = this.props.params;
         let data = {
-            id: id,
+            id: +id, // id from params is a string, so I have to change it
             name: this.state.product.name,
             image: this.state.images[0],
             price: this.state.price,
             qty: this.state.qty
         };
-        this.props.addToCart(userId, data)
+        let newStock = this.state.product.stock - data.qty;
+        let newDataProd = this.state.product;
+        // this line below is action
+        this.props.addToCart(userId, data);
+        // this line below, updating data product stock in local state
+        this.setState({ product: {...newDataProd, stock: newStock} })
         // sementara alert dulu, nanti bikin redirect ke page lain
-        alert('yes');
+        alert('Sudah masuk ke keranjang');
     }
     componentDidMount() {
         // this is actually using useParams from react-router-dom

@@ -28,7 +28,7 @@
       "colour": "WHITE/WHITE-BLACK-RAGE GREEN",
       "description": "In the game of basketball Michael Jordan is a god. Number 23 of the Chicago Bulls has set the bar extremely high: His six championship rings, five mvp`s, numerous scoring titles, not to mention his ...",
       "price": 1500000,
-      "stock": 10,
+      "stock": 9,
       "images": [
         "https://images.pexels.com/photos/13288276/pexels-photo-13288276.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
         "https://images.pexels.com/photos/2385477/pexels-photo-2385477.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
@@ -231,28 +231,28 @@
   ],
   "slider": [
     {
-      "image": "https://images.unsplash.com/photo-1544441893-675973e31985?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80",
-      "title": "Fit your style"
+      "image": "https://images.pexels.com/photos/5711161/pexels-photo-5711161.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "title": "Be classy and social"
     },
     {
-      "image": "https://images.unsplash.com/photo-1505784045224-1247b2b29cf3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
+      "image": "https://images.pexels.com/photos/6304467/pexels-photo-6304467.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
       "title": "Strength your passion and feel"
     },
     {
-      "image": "https://images.unsplash.com/photo-1515355758951-b4b20ba84c1e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
-      "title": "Fall in love at first glance"
+      "image": "https://images.pexels.com/photos/13264879/pexels-photo-13264879.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "title": "Wear for your solitude"
     },
     {
-      "image": "https://images.unsplash.com/photo-1543322748-33df6d3db806?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1351&q=80",
+      "image": "https://images.pexels.com/photos/7646200/pexels-photo-7646200.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
       "title": "Express your style with us"
     },
     {
-      "image": "https://images.unsplash.com/photo-1575891942688-395c4fd38fb8?ixlib=rb-1.2.1&auto=format&fit=crop&w=1367&q=80",
-      "title": "Made your day with smile"
+      "image": "https://images.pexels.com/photos/10349970/pexels-photo-10349970.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "title": "Grow yourself with us"
     },
     {
-      "image": "https://images.unsplash.com/photo-1579199265916-436a773ce30b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
-      "title": "Find what your love"
+      "image": "https://images.pexels.com/photos/8490865/pexels-photo-8490865.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "title": "Step ahead you adventure"
     }
   ],
   "users": [
@@ -270,7 +270,29 @@
       "password": "user123",
       "email": "budigunawan@email.com",
       "role": "user",
-      "cart": []
+      "cart": [
+        {
+          "id": 2,
+          "name": "JORDAN WESTBROOK ONE TAKE",
+          "image": "https://images.pexels.com/photos/13288276/pexels-photo-13288276.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+          "price": 1500000,
+          "qty": 1
+        },
+        {
+          "id": 4,
+          "name": "JORDAN AIR JORDAN 14 RETRO",
+          "image": "https://images.pexels.com/photos/2385477/pexels-photo-2385477.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+          "price": 2680000,
+          "qty": 0
+        },
+        {
+          "id": 1,
+          "name": "NIKE AIR ZOOM-TYPE",
+          "image": "https://images.pexels.com/photos/345415/pexels-photo-345415.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1https://images.pexels.com/photos/10497369/pexels-photo-10497369.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+          "price": 2500000,
+          "qty": 0
+        }
+      ]
     },
     {
       "username": "muhammad",

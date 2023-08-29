@@ -5,7 +5,8 @@ import {
     Dropdown,
     Image,
     Container,
-    Button
+    Button,
+    Badge
  } from "react-bootstrap";
  import { LOGO } from "../assets";
  import { Link } from "react-router-dom";
@@ -14,6 +15,20 @@ import {
  import './styles.css'
 
 class NavigationBar extends React.Component {
+    onBadge = () => {
+        let num = 0;
+        let cart = this.props.userCart;
+        for (let i = 0; i < cart.length; i++) {
+            if (cart[i].qty !== 0) {
+                num++;
+            }
+        }
+        if (num > 0) {
+            return num;
+        } else {
+            return
+        }
+    }
     render() {
         return (
             <Navbar className='my-navbar' fixed='top'>
@@ -28,7 +43,12 @@ class NavigationBar extends React.Component {
                             <Nav.Link style={styles.myNavLink}>Product</Nav.Link>
                             <Nav.Link style={styles.myNavLink}>Contact Us</Nav.Link>
                         </Nav>
-                        <Button variant="outline-light">Keranjang</Button>
+                        <Button as={Link} to='/cart' variant="outline-light">
+                            Cart
+                            <Badge bg="success">
+                                {this.onBadge()}
+                            </Badge>
+                        </Button>
                         <Dropdown>
                             <Dropdown.Toggle variant="light" id="dropdown-basic">
                                 {/* kalo login (username di user-reducer terisi) */}
@@ -67,7 +87,8 @@ const styles = {
 
 const mapStateToProps = (state) => {
     return {
-        username: state.userReducer.username
+        username: state.userReducer.username,
+        userCart: state.userReducer.cart
     }
 }
 

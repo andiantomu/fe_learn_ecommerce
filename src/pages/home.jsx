@@ -34,8 +34,8 @@ class HomePage extends React.Component {
             <div>
                 <Carousel>
                     {this.state.carousels.map((item, index) => (
-                    <Carousel.Item key={index}>
-                        <img className="my-carousel-img" src={item.image} alt='' />
+                    <Carousel.Item className="my-carousel-img" key={index}>
+                        <img src={item.image} alt='' />
                         <Carousel.Caption className='my-carousel-text'>
                         <h3>{item.title}</h3>
                         </Carousel.Caption>
