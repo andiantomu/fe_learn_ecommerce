@@ -42,7 +42,7 @@ export const addToCart = (userId, data) => {
     }
 }
 
-export const delSaveCart = (userId, productId, qtyEdited) => {
+export const saveCart = (userId, productId, qtyEdited) => {
     return (dispatch) => {
         // Pertama, tambahkan stock barang sesuai dengan data quantitas barang yg didelete
         Axios.get(`http://localhost:2000/products/${productId}`)
@@ -67,6 +67,57 @@ export const delSaveCart = (userId, productId, qtyEdited) => {
                             })
                         })
                     })
+                })
+            })
+        })
+    }
+}
+
+export const delCart = (userId, productId, qtyEdited) => {
+    return (dispatch) => {
+        // Pertama, tambahkan stock barang sesuai dengan data quantitas barang yg didelete
+        Axios.get(`http://localhost:2000/products/${productId}`)
+        .then(response => {
+            let newStock = response.data.stock + qtyEdited;
+            Axios.patch(`http://localhost:2000/products/${productId}`, {stock: newStock})
+            .then(response => {
+                // Next, cari cart user, dengan id spesifik, delete
+                Axios.get(`http://localhost:2000/users/${userId}`)
+                .then(response => {
+                    let tempCart = response.data.cart;
+                    let updCart = tempCart.filter(item => item.id !== productId)
+                    Axios.patch(`http://localhost:2000/users/${userId}`, { cart: updCart })
+                    .then(response => {
+                        // Next, update lagi data user yg di global state
+                        Axios.get(`http://localhost:2000/users/${userId}`)
+                        .then(response => {
+                            return dispatch({
+                                type: `LOGIN`,
+                                payload: response.data
+                            })
+                        })
+                    })
+                })
+            })
+        })
+    }
+}
+
+export const checkout = (data, userId) => {
+    return (dispatch) => {
+        Axios.post('http://localhost:2000/history/', data)
+        .then(response => {
+            return dispatch({
+                type: 'CHECKOUT',
+                payload: response.data
+            })
+        })
+        .then(response => {
+            Axios.patch(`http://localhost:2000/users/${userId}`, { cart: [] })
+            .then(response => {
+                return dispatch({
+                    type: `LOGIN`,
+                    payload: response.data
                 })
             })
         })

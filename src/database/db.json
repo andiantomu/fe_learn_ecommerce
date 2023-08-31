@@ -9,7 +9,7 @@
       "colour": "BLACK/SUMMIT WHITE-MENTA-ORANGE TRANCE",
       "description": "When it comes to basketball, there is no way around Nike – the brand with the Swoosh belongs to the game like dunks, three-pointers and cross-overs. Whether in the NBA, European leagues or your neighborhood...",
       "price": 2500000,
-      "stock": 13,
+      "stock": 7,
       "images": [
         "https://images.pexels.com/photos/345415/pexels-photo-345415.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1https://images.pexels.com/photos/10497369/pexels-photo-10497369.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
         "https://images.pexels.com/photos/12628400/pexels-photo-12628400.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
@@ -47,7 +47,7 @@
       "colour": "WHITE/BLUE FURY-OPTI YELLOW-DIGITAL PINK",
       "description": "The NIKE KYRIE 6 is the latest addition to the signature performance line of Kyrie Irving and Nike. If you think about Uncle Drew, immediately the explosive dribblings and his speed of direction changees of the impersonated ankle breaker comes into mind.",
       "price": 1780000,
-      "stock": 9,
+      "stock": 6,
       "images": [
         "https://images.pexels.com/photos/2529157/pexels-photo-2529157.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
         "https://images.pexels.com/photos/6540980/pexels-photo-6540980.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
@@ -66,7 +66,7 @@
       "colour": "BLACK/GYM RED-WHITE-OFF WHITE",
       "description": "In the game of basketball Michael Jordan is a god. Number 23 of the Chicago Bulls has set the bar extremely high: His six championship rings, five mvp`s, numerous scoring titles, not to mention his ...",
       "price": 2680000,
-      "stock": 10,
+      "stock": 11,
       "images": [
         "https://images.pexels.com/photos/2385477/pexels-photo-2385477.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
         "https://images.pexels.com/photos/11209837/pexels-photo-11209837.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
@@ -270,29 +270,7 @@
       "password": "user123",
       "email": "budigunawan@email.com",
       "role": "user",
-      "cart": [
-        {
-          "id": 2,
-          "name": "JORDAN WESTBROOK ONE TAKE",
-          "image": "https://images.pexels.com/photos/13288276/pexels-photo-13288276.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-          "price": 1500000,
-          "qty": 1
-        },
-        {
-          "id": 4,
-          "name": "JORDAN AIR JORDAN 14 RETRO",
-          "image": "https://images.pexels.com/photos/2385477/pexels-photo-2385477.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-          "price": 2680000,
-          "qty": 0
-        },
-        {
-          "id": 1,
-          "name": "NIKE AIR ZOOM-TYPE",
-          "image": "https://images.pexels.com/photos/345415/pexels-photo-345415.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1https://images.pexels.com/photos/10497369/pexels-photo-10497369.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-          "price": 2500000,
-          "qty": 0
-        }
-      ]
+      "cart": []
     },
     {
       "username": "muhammad",
@@ -302,5 +280,6 @@
       "id": 3,
       "cart": []
     }
-  ]
+  ],
+  "history": []
 }

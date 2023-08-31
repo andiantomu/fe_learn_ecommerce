@@ -81,3 +81,8 @@
     height: 4rem;
     object-fit: cover;
 }
+.my-cart-heading {
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+}

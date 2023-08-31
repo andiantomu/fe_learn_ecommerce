@@ -16,13 +16,8 @@ import {
 
 class NavigationBar extends React.Component {
     onBadge = () => {
-        let num = 0;
         let cart = this.props.userCart;
-        for (let i = 0; i < cart.length; i++) {
-            if (cart[i].qty !== 0) {
-                num++;
-            }
-        }
+        let num = cart.length;
         if (num > 0) {
             return num;
         } else {
@@ -61,7 +56,7 @@ class NavigationBar extends React.Component {
                                     this.props.username ?
                                     <>
                                         <Dropdown.Item>Profile</Dropdown.Item>
-                                        <Dropdown.Item>History</Dropdown.Item>
+                                        <Dropdown.Item as={Link} to='/history'>History</Dropdown.Item>
                                         <Dropdown.Item onClick={this.props.logout}>Log Out</Dropdown.Item>
                                     </> :
                                     // kalo enggak, maka
