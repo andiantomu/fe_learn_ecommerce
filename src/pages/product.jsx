@@ -2,29 +2,20 @@ import React from "react";
 import Axios from "axios";
 import { Link } from "react-router-dom";
 import {
-    Carousel,
     Button,
     Card,
     Pagination
 } from 'react-bootstrap';
 
-class HomePage extends React.Component {
+class ProductPage extends React.Component {
     constructor (props) {
         super(props)
         this.state = {
-            carousels: [],
             products: [],
             currentPage: 1
         }
     }
     componentDidMount() {
-        Axios.get('http://localhost:2000/slider')
-        .then(response => {
-            this.setState({ carousels: response.data })
-        })
-        .catch(error => {
-            console.error('error fetching data slider', error);
-        });
         Axios.get('http://localhost:2000/products')
         .then(response => {
             this.setState({ products: response.data })
@@ -34,24 +25,14 @@ class HomePage extends React.Component {
         });
     }
     render() {
-        const itemsPerPage = 4;
+        const itemsPerPage = 8;
         const indexOfLastItem = this.state.currentPage * itemsPerPage;
         const indexOfFirstItem = indexOfLastItem - itemsPerPage;
         const currentItems = this.state.products.slice(indexOfFirstItem, indexOfLastItem);
         const totalPages = Math.ceil(this.state.products.length / itemsPerPage);
         console.log(totalPages)
         return (
-            <div>
-                <Carousel>
-                    {this.state.carousels.map((item, index) => (
-                    <Carousel.Item className="my-carousel-img" key={index}>
-                        <img src={item.image} alt='' />
-                        <Carousel.Caption className='my-carousel-text'>
-                        <h3>{item.title}</h3>
-                        </Carousel.Caption>
-                    </Carousel.Item>
-                    ))}
-                </Carousel>
+            <div className="my-base-cont">
                 <div className='my-product-cont'>
                     {currentItems.map(item => (
                     <Card key={item.id} style={{ width: '18rem' }}>
@@ -132,11 +113,10 @@ class HomePage extends React.Component {
                             <Pagination.Last onClick={() => this.setState({ currentPage: totalPages })} />
                         }
                     </Pagination>
-                    <Link to='/products'>See All Products</Link>
                 </div>
             </div>
         )
     }
 }
 
-export default HomePage
+export default ProductPage

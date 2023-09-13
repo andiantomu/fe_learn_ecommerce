@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import { 
     Navbar,
     Nav,
@@ -7,12 +7,12 @@ import {
     Container,
     Button,
     Badge
- } from "react-bootstrap";
- import { LOGO } from "../assets";
- import { Link } from "react-router-dom";
- import { connect } from "react-redux";
- import { logout } from "../redux/actions";
- import './styles.css'
+} from "react-bootstrap";
+import { LOGO } from "../assets";
+import { Link } from "react-router-dom";
+import { connect } from "react-redux";
+import { logout } from "../redux/actions";
+import './styles.css'
 
 class NavigationBar extends React.Component {
     onBadge = () => {
@@ -35,15 +35,18 @@ class NavigationBar extends React.Component {
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="me-auto">
                             <Nav.Link style={styles.myNavLink} as={Link} to='/'>Home</Nav.Link>
-                            <Nav.Link style={styles.myNavLink}>Product</Nav.Link>
-                            <Nav.Link style={styles.myNavLink}>Contact Us</Nav.Link>
+                            <Nav.Link style={styles.myNavLink} as={Link} to='/products'>Products</Nav.Link>
+                            <Nav.Link style={styles.myNavLink} href="#footer">Contact Us</Nav.Link>
                         </Nav>
+                        {this.props.userRole === "user" ?
                         <Button as={Link} to='/cart' variant="outline-light">
                             Cart
                             <Badge bg="success">
                                 {this.onBadge()}
                             </Badge>
                         </Button>
+                        :
+                        null }
                         <Dropdown>
                             <Dropdown.Toggle variant="light" id="dropdown-basic">
                                 {/* kalo login (username di user-reducer terisi) */}
@@ -83,7 +86,8 @@ const styles = {
 const mapStateToProps = (state) => {
     return {
         username: state.userReducer.username,
-        userCart: state.userReducer.cart
+        userCart: state.userReducer.cart,
+        userRole: state.userReducer.role
     }
 }
 

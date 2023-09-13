@@ -9,6 +9,11 @@
     height: 40px;
     width: auto;
 }
-/* .my-nav-link {
+footer {
+    background-color: #272024;
     color: #f0f0ee;
-} */
+    border-top: 1px solid #f0f0ee;
+    height: 20vh;
+    padding: 1em;
+    text-align: end;
+}

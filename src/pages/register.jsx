@@ -20,8 +20,8 @@ class RegisPage extends React.Component {
         }
     }
     userValid = (e) => {
-        let symb = /[!@#$%^&*]/
-        let warnText = `Your username must be 8-20 characters long, contain letters and numbers,
+        let symb = /^[a-z0-9_-]{3,16}$/
+        let warnText = `Your username must be 3-16 characters long, contain letters and numbers,
         and must not contain spaces, special characters, or emoji.`
         if (symb.test(e.target.value) || e.target.value.length < 8 || e.target.value.length > 20)
         return this.setState({usernameErr: [true, warnText]})

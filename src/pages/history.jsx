@@ -16,14 +16,25 @@ class HistoryPage extends React.Component {
         }
     }
     componentDidMount() {
-        Axios.get(`http://localhost:2000/history?idUser=${this.props.userId}`)
+        // if it's admin, then get all the history data
+        this.props.userRole === "admin" ?
+        (Axios.get(`http://localhost:2000/history`)
         .then(response => {
             this.setState({ history: response.data })
             console.log(response.data);
         })
         .catch(error => {
             console.error('error fetching data slider', error);
-        });
+        }))
+        : // but if it's user, then get only the history of the specific id
+        (Axios.get(`http://localhost:2000/history?idUser=${this.props.userId}`)
+        .then(response => {
+            this.setState({ history: response.data })
+            console.log(response.data);
+        })
+        .catch(error => {
+            console.error('error fetching data slider', error);
+        }))
     }
     render() {
         // proteksi biar redirect ke login kalo belum
@@ -31,7 +42,7 @@ class HistoryPage extends React.Component {
             return <Navigate to='/login' />
         }
         return (
-            <div className="my-cart-cont">
+            <div className="my-base-cont">
                 <h2>History Page</h2>
                 <Accordion>
                     {this.state.history.reverse().map((item, index) => (
@@ -74,7 +85,7 @@ class HistoryPage extends React.Component {
 const mapStateToProps = (state) => {
     return {
         userId: state.userReducer.id,
-        // history: state.historyReducer
+        userRole: state.userReducer.role
     }
 }
 

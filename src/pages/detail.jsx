@@ -87,9 +87,7 @@ class DetailPage extends React.Component {
                 // console.log(response.data)
                 this.setState({
                     product: response.data,
-                    // images dipanggil di line 72, kalo pake product.images, map ga mau jalan
                     images: response.data.images,
-                    // price dipanggil di line 95, kalo pake product.price, toLocaleString gak mau jalan
                     price: response.data.price
                 })
             })
@@ -104,7 +102,6 @@ class DetailPage extends React.Component {
             <div className="my-detail-cont">
                 <Carousel className="my-detail-caro-cont">
                     {this.state.images.map((item, index) => (
-                    // {this.state.product.images.map((item, index) => ( // ini ga map-nya mau jalan
                         <Carousel.Item key={index}>
                             <img className="my-detail-carousel-img" src={item} alt='' />
                         </Carousel.Item>
@@ -145,7 +142,10 @@ class DetailPage extends React.Component {
                             onChange={this.onInp}
                         />
                         <Button onClick={this.onInc} variant="primary">+</Button> 
+                        {this.props.userRole === "admin" ?
+                        null :
                         <Button onClick={this.onCart} variant="primary">Add to Cart</Button> 
+                        }
                     </div>
                 </div>
             </div>
@@ -162,7 +162,8 @@ const styles = {
 
 const mapStateToProps = (state) => {
     return {
-        userId: state.userReducer.id // dipake untuk cek udah login atau gak
+        userId: state.userReducer.id,
+        userRole: state.userReducer.role
     }
 }
 

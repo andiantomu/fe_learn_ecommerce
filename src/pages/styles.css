@@ -1,3 +1,7 @@
+.my-base-cont {
+    padding-top: 80px;
+    min-height: 100vh;
+}
 .my-login-div {
     background-image: url(../assets/pexels-alfin-auzikri-6003052.jpg);
     background-size: cover;
@@ -50,6 +54,11 @@
 .my-card-btn {
     width: 45%;
 }
+.my-pagination {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 .my-detail-cont {
     display: flex;
     margin-top: 13vh;
@@ -72,9 +81,6 @@
 }
 .my-detail-btn-input {
     width: 1rem;
-}
-.my-cart-cont {
-    margin-top: 10vw;
 }
 .my-cart-img {
     width: 6rem;

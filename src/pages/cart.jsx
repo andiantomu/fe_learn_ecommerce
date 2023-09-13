@@ -21,9 +21,6 @@ class CartPage extends React.Component {
             passConfirm: false
         }
     }
-    // onTry = () => {
-    //     console.log(this.state.userCart)
-    // }
     onCheckOut = () => {
         if (this.state.userCart.length === 0) {
             return alert("keranjang kosong")
@@ -33,7 +30,6 @@ class CartPage extends React.Component {
     }
     onConfirm = () => {
         let password = this.refs.password.value;
-        // Peringatan kalo input kosong
         if (password === this.props.userPass) {
             let data = {
                 idUser: this.props.userId,
@@ -191,7 +187,7 @@ class CartPage extends React.Component {
             // note: Navigate adalah syntax baru dari Redirect dari react-router-dom
         }
         return (
-            <div className="my-cart-cont">
+            <div className="my-base-cont">
                 <div className="my-cart-heading">
                     <h2>Cart</h2>
                     <Button onClick={this.onCheckOut} variant="primary">Checkout</Button>
@@ -277,7 +273,7 @@ class CartPage extends React.Component {
 
 const mapStateToProps = (state) => {
     return {
-        userId: state.userReducer.id, // dipake untuk cek udah login atau gak
+        userId: state.userReducer.id,
         userCart: state.userReducer.cart,
         userPass: state.userReducer.password,
         username: state.userReducer.username

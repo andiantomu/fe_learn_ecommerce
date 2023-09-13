@@ -9,7 +9,7 @@
       "colour": "BLACK/SUMMIT WHITE-MENTA-ORANGE TRANCE",
       "description": "When it comes to basketball, there is no way around Nike – the brand with the Swoosh belongs to the game like dunks, three-pointers and cross-overs. Whether in the NBA, European leagues or your neighborhood...",
       "price": 2500000,
-      "stock": 7,
+      "stock": 10,
       "images": [
         "https://images.pexels.com/photos/345415/pexels-photo-345415.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1https://images.pexels.com/photos/10497369/pexels-photo-10497369.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
         "https://images.pexels.com/photos/12628400/pexels-photo-12628400.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
@@ -28,7 +28,7 @@
       "colour": "WHITE/WHITE-BLACK-RAGE GREEN",
       "description": "In the game of basketball Michael Jordan is a god. Number 23 of the Chicago Bulls has set the bar extremely high: His six championship rings, five mvp`s, numerous scoring titles, not to mention his ...",
       "price": 1500000,
-      "stock": 9,
+      "stock": 8,
       "images": [
         "https://images.pexels.com/photos/13288276/pexels-photo-13288276.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
         "https://images.pexels.com/photos/2385477/pexels-photo-2385477.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
@@ -252,7 +252,7 @@
     },
     {
       "image": "https://images.pexels.com/photos/8490865/pexels-photo-8490865.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      "title": "Step ahead you adventure"
+      "title": "Step ahead your adventure"
     }
   ],
   "users": [
@@ -261,8 +261,7 @@
       "username": "admin",
       "password": "admin",
       "email": "admin@email.com",
-      "role": "admin",
-      "cart": []
+      "role": "admin"
     },
     {
       "id": 2,
@@ -279,7 +278,75 @@
       "role": "user",
       "id": 3,
       "cart": []
+    },
+    {
+      "username": "andianto123",
+      "email": "andianto@email.com",
+      "password": "User123456",
+      "role": "user",
+      "cart": [],
+      "id": 4
     }
   ],
-  "history": []
+  "history": [
+    {
+      "idUser": 4,
+      "username": "andianto123",
+      "time": "9/2/2023, 1:31:55 PM",
+      "product": [
+        {
+          "id": 1,
+          "name": "NIKE AIR ZOOM-TYPE",
+          "image": "https://images.pexels.com/photos/345415/pexels-photo-345415.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1https://images.pexels.com/photos/10497369/pexels-photo-10497369.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+          "price": 2500000,
+          "qty": 2
+        },
+        {
+          "id": 2,
+          "name": "JORDAN WESTBROOK ONE TAKE",
+          "image": "https://images.pexels.com/photos/13288276/pexels-photo-13288276.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+          "price": 1500000,
+          "qty": 1
+        }
+      ],
+      "id": 1
+    },
+    {
+      "idUser": 4,
+      "username": "andianto123",
+      "time": "9/2/2023, 2:16:09 PM",
+      "product": [
+        {
+          "id": 1,
+          "name": "NIKE AIR ZOOM-TYPE",
+          "image": "https://images.pexels.com/photos/345415/pexels-photo-345415.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1https://images.pexels.com/photos/10497369/pexels-photo-10497369.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+          "price": 2500000,
+          "qty": 4
+        },
+        {
+          "id": 2,
+          "name": "JORDAN WESTBROOK ONE TAKE",
+          "image": "https://images.pexels.com/photos/13288276/pexels-photo-13288276.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+          "price": 1500000,
+          "qty": 1
+        }
+      ],
+      "id": 2
+    },
+    {
+      "idUser": 2,
+      "username": "budigunawan",
+      "time": "9/13/2023, 2:08:28 PM",
+      "product": [
+        {
+          "id": 2,
+          "name": "JORDAN WESTBROOK ONE TAKE",
+          "image": "https://images.pexels.com/photos/13288276/pexels-photo-13288276.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+          "price": 1500000,
+          "qty": 1
+        }
+      ],
+      "id": 3
+    }
+  ]
 }
