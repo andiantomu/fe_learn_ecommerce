@@ -18,14 +18,14 @@ class HomePage extends React.Component {
         }
     }
     componentDidMount() {
-        Axios.get('http://localhost:2000/slider')
+        Axios.get('https://havelar-db.onrender.com/slider')
         .then(response => {
             this.setState({ carousels: response.data })
         })
         .catch(error => {
             console.error('error fetching data slider', error);
         });
-        Axios.get('http://localhost:2000/products')
+        Axios.get('https://havelar-db.onrender.com/products')
         .then(response => {
             this.setState({ products: response.data })
         })

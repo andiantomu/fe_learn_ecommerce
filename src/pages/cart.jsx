@@ -168,7 +168,7 @@ class CartPage extends React.Component {
         this.setState({ userCart: updatedArray });
         // Berikutnya saya get data stock
         // saya tidak mengikuti metode tutor (data stock masuk global state cart user), karena menurut saya, data stock butuh update
-        Axios.get('http://localhost:2000/products')
+        Axios.get('https://havelar-db.onrender.com/products')
         .then(response => {
             let productStock = []
             response.data.forEach(item => {

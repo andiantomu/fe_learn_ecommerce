@@ -82,7 +82,7 @@ class DetailPage extends React.Component {
         // this is actually using useParams from react-router-dom
         // const { id } = useParams()
         const { id } = this.props.params;
-        Axios.get(`http://localhost:2000/products/${id}`)
+        Axios.get(`https://havelar-db.onrender.com/products/${id}`)
             .then(response => {
                 // console.log(response.data)
                 this.setState({

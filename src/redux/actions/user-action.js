@@ -2,7 +2,7 @@ import Axios from "axios";
 
 export const login = (username, password) => {
     return (dispatch) => {
-        Axios.get(`http://localhost:2000/users?username=${username}&password=${password}`)
+        Axios.get(`https://havelar-db.onrender.com/users?username=${username}&password=${password}`)
         .then(res => {
             if (res.data.length === 0) {
                 // Kalo gak ada, kasih info
@@ -44,7 +44,7 @@ export const logout = () => {
 
 export const keepLogin = (id) => {
     return (dispatch) => {
-        Axios.get(`http://localhost:2000/users/${id}`)
+        Axios.get(`https://havelar-db.onrender.com/users/${id}`)
         .then(res => {
             return dispatch({
                 type: 'LOGIN',
@@ -57,7 +57,7 @@ export const keepLogin = (id) => {
 export const regDataValid = (username, email, data) => {
     return (dispatch) => {
         // cek apakah sudah ada username tsb di datanbase
-        Axios.get(`http://localhost:2000/users?username=${username}`)
+        Axios.get(`https://havelar-db.onrender.com/users?username=${username}`)
         .then(res => {
             // kalo sudah ada ada, maka
             if (res.data.length !== 0) {
@@ -66,7 +66,7 @@ export const regDataValid = (username, email, data) => {
                 })
             } else {
                 // kalo tidak ada, maka berikutnya cek apakah sudah ada email tsb di datanbase
-                Axios.get(`http://localhost:2000/users?email=${email}`)
+                Axios.get(`https://havelar-db.onrender.com/users?email=${email}`)
                 .then(res => {
                     // kalo sudah ada ada, maka reducer case di bawah ini:
                     if (res.data.length !== 0) {
@@ -75,7 +75,7 @@ export const regDataValid = (username, email, data) => {
                         })
                     } else {
                         // kalo benar ga ada, maka reducer case di bawah ini:
-                        Axios.post('http://localhost:2000/users/', data)
+                        Axios.post('https://havelar-db.onrender.com/users/', data)
                         .then(res => {
                             return dispatch({
                                 type: 'REG_SUCCESS',

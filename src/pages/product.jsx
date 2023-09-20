@@ -16,7 +16,7 @@ class ProductPage extends React.Component {
         }
     }
     componentDidMount() {
-        Axios.get('http://localhost:2000/products')
+        Axios.get('https://havelar-db.onrender.com/products')
         .then(response => {
             this.setState({ products: response.data })
         })

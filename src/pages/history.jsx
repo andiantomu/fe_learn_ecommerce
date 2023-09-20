@@ -18,7 +18,7 @@ class HistoryPage extends React.Component {
     componentDidMount() {
         // if it's admin, then get all the history data
         this.props.userRole === "admin" ?
-        (Axios.get(`http://localhost:2000/history`)
+        (Axios.get(`https://havelar-db.onrender.com/history`)
         .then(response => {
             this.setState({ history: response.data })
             console.log(response.data);
@@ -27,7 +27,7 @@ class HistoryPage extends React.Component {
             console.error('error fetching data slider', error);
         }))
         : // but if it's user, then get only the history of the specific id
-        (Axios.get(`http://localhost:2000/history?idUser=${this.props.userId}`)
+        (Axios.get(`https://havelar-db.onrender.com/history?idUser=${this.props.userId}`)
         .then(response => {
             this.setState({ history: response.data })
             console.log(response.data);
