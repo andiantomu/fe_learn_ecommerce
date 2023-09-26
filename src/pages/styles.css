@@ -3,26 +3,30 @@
     min-height: 100vh;
 }
 .my-login-div {
-    background-image: url(../assets/pexels-alfin-auzikri-6003052.jpg);
+    background-image: url(https://images.pexels.com/photos/1667434/pexels-photo-1667434.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
     margin: 0;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: right;
 }
 .my-login-cont {
     width: 60vw;
-    max-height: 90vh;
     border: 1px solid #f0f0ee;
     border-radius: 10px;
     color: #f0f0ee;
     padding: 1em;
     background-color: #6f737986;
-    margin-top: 40px;
+    margin-top: 5rem;
+    margin-bottom: 1rem;
+    margin-right: 3rem;
+}
+.my-link {
+    color: #f0f0ee;
 }
 .my-carousel-img {
     width: 100vw;
@@ -33,10 +37,14 @@
     background-color: rgba(0, 0, 0, 0.5);
 }
 .my-product-cont {
-    margin-top: 2em;
+    padding-top: 2em;
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
+}
+.my-card {
+    width: 18rem;
+    margin-bottom: 1rem;
 }
 .my-card-img {
     height: 12rem;
@@ -49,12 +57,13 @@
 }
 .my-card-btn-cont {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
 }
 .my-card-btn {
-    width: 45%;
+    width: 90%;
 }
 .my-pagination {
+    padding-bottom: 2rem;
     display: flex;
     flex-direction: column;
     align-items: center;

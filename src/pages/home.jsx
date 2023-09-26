@@ -39,7 +39,6 @@ class HomePage extends React.Component {
         const indexOfFirstItem = indexOfLastItem - itemsPerPage;
         const currentItems = this.state.products.slice(indexOfFirstItem, indexOfLastItem);
         const totalPages = Math.ceil(this.state.products.length / itemsPerPage);
-        console.log(totalPages)
         return (
             <div>
                 <Carousel>
@@ -54,7 +53,7 @@ class HomePage extends React.Component {
                 </Carousel>
                 <div className='my-product-cont'>
                     {currentItems.map(item => (
-                    <Card key={item.id} style={{ width: '18rem' }}>
+                    <Card key={item.id} className="my-card bg-dark text-white">
                         <Card.Img className='my-card-img' variant="top" src={item.images} />
                         <Card.Body>
                             <Card.Title className="my-card-title">
@@ -65,14 +64,13 @@ class HomePage extends React.Component {
                             </Card.Text>
                         </Card.Body>
                         <Card.Body className='my-card-btn-cont'>
-                            <Button className='my-card-btn' variant="primary">Wish</Button>
                             <Button
                             className='my-card-btn'
                             as={Link}
                             to={`/detail/${item.id}`}
                             // lihat set up route di App.js, pake dynamic url
-                            variant="primary">
-                                Buy
+                            variant="light">
+                                <i className="fa-solid fa-cart-shopping"></i> Buy/See Detail
                             </Button>
                         </Card.Body>
                     </Card>
@@ -132,7 +130,7 @@ class HomePage extends React.Component {
                             <Pagination.Last onClick={() => this.setState({ currentPage: totalPages })} />
                         }
                     </Pagination>
-                    <Link to='/products'>See All Products</Link>
+                    <Button as={Link} to={'/products'} variant='primary'>See All Products</Button>
                 </div>
             </div>
         )

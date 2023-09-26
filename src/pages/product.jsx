@@ -30,12 +30,11 @@ class ProductPage extends React.Component {
         const indexOfFirstItem = indexOfLastItem - itemsPerPage;
         const currentItems = this.state.products.slice(indexOfFirstItem, indexOfLastItem);
         const totalPages = Math.ceil(this.state.products.length / itemsPerPage);
-        console.log(totalPages)
         return (
             <div className="my-base-cont">
                 <div className='my-product-cont'>
                     {currentItems.map(item => (
-                    <Card key={item.id} style={{ width: '18rem' }}>
+                    <Card key={item.id} className="my-card bg-dark text-white">
                         <Card.Img className='my-card-img' variant="top" src={item.images} />
                         <Card.Body>
                             <Card.Title className="my-card-title">
@@ -46,13 +45,12 @@ class ProductPage extends React.Component {
                             </Card.Text>
                         </Card.Body>
                         <Card.Body className='my-card-btn-cont'>
-                            <Button className='my-card-btn' variant="primary">Wish</Button>
                             <Button
                             className='my-card-btn'
                             as={Link}
                             to={`/detail/${item.id}`}
                             // lihat set up route di App.js, pake dynamic url
-                            variant="primary">
+                            variant="light">
                                 Buy
                             </Button>
                         </Card.Body>

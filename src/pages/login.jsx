@@ -41,9 +41,9 @@ class LoginPage extends React.Component {
         return (
             <div className="my-login-div">
                 <div className="my-login-cont">
-                    <h1>Hello,</h1>
-                    <p>welcome back!</p>
+                    <h2>Please login first,</h2>
                     <InputGroup className="mb-3">
+                        <InputGroup.Text id="basic-addon1"><i className="fa-solid fa-user"></i></InputGroup.Text>
                         <Form.Control
                             placeholder="Username"
                             // ref ini buat ambil data buat function onLogin
@@ -51,6 +51,7 @@ class LoginPage extends React.Component {
                         />
                     </InputGroup>
                     <InputGroup className="mb-3">
+                        <InputGroup.Text id="basic-addon1"><i className="fa-solid fa-key"></i></InputGroup.Text>
                         <Form.Control
                             // pake bootstrap type="password", kalo di video pake function buat hidden password
                             type='password'
@@ -59,8 +60,8 @@ class LoginPage extends React.Component {
                             ref="password"
                         />
                     </InputGroup>
-                    <Button variant="light" onClick={this.onLogin}>Login</Button>
-                    <p>Already have an account? <Link to='/register'>Register</Link></p>
+                    <Button variant="light" className='mb-2' onClick={this.onLogin}>Login</Button>
+                    <p>Not having an account? <Link to='/register' style={styles.myLink}>Register</Link></p>
                 </div>
                 {/* Modal (notif) jika input kosong */}
                 <Modal show={this.state.error}>
@@ -92,6 +93,12 @@ class LoginPage extends React.Component {
                 </Modal>
             </div>
         )
+    }
+}
+
+const styles = {
+    myLink: {
+        color: '#f0f0ee'
     }
 }
 

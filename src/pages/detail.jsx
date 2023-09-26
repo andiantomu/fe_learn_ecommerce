@@ -131,7 +131,7 @@ class DetailPage extends React.Component {
                     </Table>
                     <p>Input jumlah pesanan:</p>
                     <div className="my-detail-btn-cont">
-                        <Button onClick={this.onDec} variant="primary">-</Button>
+                        <Button onClick={this.onDec} variant="secondary">-</Button>
                         <Form.Control
                             style={styles.formControl}
                             type="number"
@@ -141,10 +141,10 @@ class DetailPage extends React.Component {
                             // onChange={e => this.setState({ qty: +e.target.value })}
                             onChange={this.onInp}
                         />
-                        <Button onClick={this.onInc} variant="primary">+</Button> 
+                        <Button onClick={this.onInc} variant="secondary">+</Button> 
                         {this.props.userRole === "admin" ?
                         null :
-                        <Button onClick={this.onCart} variant="primary">Add to Cart</Button> 
+                        <Button onClick={this.onCart} variant="success"><i className="fa-solid fa-cart-plus"></i> Add to Cart</Button> 
                         }
                     </div>
                 </div>

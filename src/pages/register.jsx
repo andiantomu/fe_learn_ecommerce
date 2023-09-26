@@ -23,7 +23,7 @@ class RegisPage extends React.Component {
         let symb = /^[a-z0-9_-]{3,16}$/
         let warnText = `Your username must be 3-16 characters long, contain letters and numbers,
         and must not contain spaces, special characters, or emoji.`
-        if (symb.test(e.target.value) || e.target.value.length < 8 || e.target.value.length > 20)
+        if (!symb.test(e.target.value))
         return this.setState({usernameErr: [true, warnText]})
         this.setState({usernameErr: [false, '']})
     }
@@ -74,11 +74,10 @@ class RegisPage extends React.Component {
         return (
             <div className="my-login-div">
                 <div className="my-login-cont">
-                    <h1>Hello,</h1>
-                    <p>welcome!</p>
+                    <h2>Register, and join us!</h2>
                     <Form>
-                        {/* Input username */}
                         <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
+                            <Form.Label>Username</Form.Label>
                             <Form.Control
                                 onChange={(e) => this.userValid(e)}
                                 type="text"
@@ -86,41 +85,41 @@ class RegisPage extends React.Component {
                                 placeholder="New Username"
                                 ref="username"
                             />
-                            <Form.Text>
+                            <Form.Text style={styles.myFormText}>
                                 {this.state.usernameErr[0] ? this.state.usernameErr[1] : ''}
                             </Form.Text>
                         </Form.Group>
-                        {/* Input email */}
                         <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+                            <Form.Label>Email</Form.Label>
                             <Form.Control
                                 onChange={(e) => this.emailValid(e)}
                                 type="email"
                                 placeholder="Email"
                                 ref="email"
                             />
-                            <Form.Text>
+                            <Form.Text style={styles.myFormText}>
                                 {this.state.emailErr[0] ? this.state.emailErr[1] : ''}
                             </Form.Text>
                         </Form.Group>
-                        {/* Input password */}
                         <Form.Group className="mb-3" controlId="formPlaintextPassword">
+                            <Form.Label>Password</Form.Label>
                             <Form.Control
                                 onChange={(e) => this.passwordValid(e)}
                                 type="password"
                                 placeholder="New Password"
                                 ref="password"
                             />
-                            <Form.Text>
+                            <Form.Text style={styles.myFormText}>
                                 {this.state.passwordErr[0] ? this.state.passwordErr[1] : ''}
                             </Form.Text>
                         </Form.Group>
-                        {/* Confirm password */}
-                        <Form.Group className="mb-3" controlId="formPlaintextPassword">
+                        <Form.Group className="mb-3" controlId="formPlaintextPasswordCF">
+                            <Form.Label>Confirm Password</Form.Label>
                             <Form.Control type="password" placeholder="Confirm Password" ref="passwordCf" />
                         </Form.Group>
                     </Form>
-                    <Button variant="light" onClick={this.onRegister}>Register</Button>
-                    <p>Already have an account? <Link to='/login'>Login</Link></p>
+                    <Button variant="light" className='mb-2' onClick={this.onRegister}>Register</Button>
+                    <p>Already have an account? <Link to='/login' style={styles.myLink}>Login</Link></p>
                 </div>
                 <Modal show={this.state.emptyErr}>
                     <Modal.Header>
@@ -150,6 +149,15 @@ class RegisPage extends React.Component {
                 </Modal>
             </div>
         )
+    }
+}
+
+const styles = {
+    myLink: {
+        color: '#f0f0ee'
+    },
+    myFormText: {
+        color: 'yellow'
     }
 }
 

@@ -121,7 +121,7 @@ class CartPage extends React.Component {
         let tempCart = this.state.userCart;
         let findItemCart = tempCart.find(item => item.id === idProduct);
         // to makse sure the input is in range between 1 and max stock
-        if (e.target.value > 0 && e.target.value <= 9) {
+        if (e.target.value > 0 && e.target.value <= stock) {
             findItemCart.tempQty = +e.target.value;
             return this.setState({ userCart: tempCart })
         } else if (e.target.value === "") {
@@ -190,7 +190,7 @@ class CartPage extends React.Component {
             <div className="my-base-cont">
                 <div className="my-cart-heading">
                     <h2>Cart</h2>
-                    <Button onClick={this.onCheckOut} variant="primary">Checkout</Button>
+                    <Button onClick={this.onCheckOut} variant="success">Checkout</Button>
                 </div>
                 <Table striped bordered hover>
                     <thead>
@@ -214,7 +214,7 @@ class CartPage extends React.Component {
                                     <td>{item.name}</td>
                                     {item.editMode ?
                                     <td className="my-detail-btn-cont">
-                                        <Button onClick={() =>this.onDec(item.tempQty, item.id)} variant="primary">-</Button>
+                                        <Button onClick={() =>this.onDec(item.tempQty, item.id)} variant="secondary">-</Button>
                                         <Form.Control
                                             // style={styles.formControl}
                                             type="number"
@@ -224,17 +224,17 @@ class CartPage extends React.Component {
                                             // onChange={e => this.setState({ qty: +e.target.value })}
                                             onChange={(e) => this.onInp(e, item.id, item.qty)}
                                         />
-                                        <Button onClick={() =>this.onInc(item.tempQty, item.id, item.qty)} variant="primary">+</Button>
+                                        <Button onClick={() =>this.onInc(item.tempQty, item.id, item.qty)} variant="secondary">+</Button>
                                     </td> : 
                                     <td>{item.qty}</td>}
                                     <td>{(item.qty*item.price).toLocaleString('en-ID', { style: 'currency', currency: 'IDR' })}</td>
                                     {item.editMode ?
                                     <td>
-                                        <Button onClick={() => this.onSave(item.id)} variant="danger">Save</Button>
-                                        <Button onClick={() => this.onCancel(item.id)} variant="primary">Cancel</Button>
+                                        <Button onClick={() => this.onSave(item.id)} variant="warning">Save</Button>
+                                        <Button onClick={() => this.onCancel(item.id)} variant="danger">Cancel</Button>
                                     </td> : 
                                     <td>
-                                        <Button onClick={() => this.onEdit(item.id)} variant="primary">Edit</Button>
+                                        <Button onClick={() => this.onEdit(item.id)} variant="warning">Edit</Button>
                                         <Button onClick={() => this.onDelete(item.id, item.qty)} variant="danger">Delete</Button>
                                     </td>}
                                 </tr>
@@ -263,7 +263,7 @@ class CartPage extends React.Component {
                     </Modal.Body>
 
                     <Modal.Footer>
-                    <Button variant="light" onClick={this.onConfirm}>Confirm</Button>
+                    <Button variant="success" onClick={this.onConfirm}>Confirm</Button>
                     </Modal.Footer>
                 </Modal>
             </div>

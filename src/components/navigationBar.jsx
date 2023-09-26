@@ -40,7 +40,7 @@ class NavigationBar extends React.Component {
                         </Nav>
                         {this.props.userRole === "user" ?
                         <Button as={Link} to='/cart' variant="outline-light">
-                            Cart
+                            <i className="fa-solid fa-cart-shopping"></i> Cart
                             <Badge bg="success">
                                 {this.onBadge()}
                             </Badge>
@@ -50,7 +50,7 @@ class NavigationBar extends React.Component {
                         <Dropdown>
                             <Dropdown.Toggle variant="light" id="dropdown-basic">
                                 {/* kalo login (username di user-reducer terisi) */}
-                                {this.props.username ? this.props.username : 'username'}
+                                {this.props.username ? <span><i className="fa-solid fa-user"></i> {this.props.username}</span> : <span><i className="fa-solid fa-user"></i> guest</span>}
                             </Dropdown.Toggle>
 
                             <Dropdown.Menu data-bs-theme="dark">
