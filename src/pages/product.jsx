@@ -51,7 +51,7 @@ class ProductPage extends React.Component {
                             to={`/detail/${item.id}`}
                             // lihat set up route di App.js, pake dynamic url
                             variant="light">
-                                Buy
+                                <i className="fa-solid fa-cart-shopping"></i> Buy/See Detail
                             </Button>
                         </Card.Body>
                     </Card>
